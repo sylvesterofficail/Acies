@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en"><head><script src="/_sdk/telemetry_sdk.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acies Africa Technologies</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    .font-mono-heading { font-family: 'Space Mono', monospace; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-up { animation: fadeUp 0.7s ease forwards; opacity: 0; }
+    .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; } .delay-5 { animation-delay: 0.5s; } .delay-6 { animation-delay: 0.6s; }
+    .delay-7 { animation-delay: 0.7s; } .delay-8 { animation-delay: 0.8s; } .delay-9 { animation-delay: 0.9s; }
+    .delay-10 { animation-delay: 1.0s; } .delay-11 { animation-delay: 1.1s; } .delay-12 { animation-delay: 1.2s; }
+    .tech-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; border: 1px solid rgba(16,185,129,0.15); }
+    .tech-card:hover { transform: translateY(-6px); box-shadow: 0 0 30px rgba(16,185,129,0.2); border-color: rgba(16,185,129,0.6); }
+    .grid-bg { background-image: linear-gradient(rgba(16,185,129,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.05) 1px, transparent 1px); background-size: 40px 40px; }
+    .glow-text { text-shadow: 0 0 20px rgba(16,185,129,0.5), 0 0 40px rgba(16,185,129,0.2); }
+    @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(16,185,129,0.3); } 50% { box-shadow: 0 0 40px rgba(16,185,129,0.6); } }
+    .avatar-glow { animation: pulse-glow 3s ease-in-out infinite; }
+    .stat-card { border: 1px solid rgba(16,185,129,0.2); }
+    .badge-pill { transition: border-color .25s ease, color .25s ease; }
+    .badge-pill:hover { border-color: rgba(16,185,129,0.7); color: #10b981; }
+  </style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/resizing_sdk.js" type="text/javascript"></script>
+ </head>
+<body data-template-id="__page-root" class="w-full min-h-screen grid-bg" style="background: rgb(10, 10, 15);">
+  <!-- Nav -->
+<nav class="fixed top-0 w-full z-50 bg-gray-950/80 backdrop-blur-xl border-b border-emerald-500/20">
+  <div style="max-width: 1120px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;">
+
+  <!-- Logo -->
+<div style="display: flex; align-items: center;">
+  <img src="logo.png"
+       alt="Acies Africa Technologies Logo"
+       style="width: 150px; height: 80px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" />
+</div>
+
+    <!-- Navigation Links -->
+    <div class="hidden md:flex gap-6 text-sm font-medium">
+      <a href="#services" class="text-gray-400 hover:text-emerald-400 transition">Services</a>
+      <a href="#about" class="text-gray-400 hover:text-emerald-400 transition">About</a>
+      <a href="#process" class="text-gray-400 hover:text-emerald-400 transition">Process</a>
+      <a href="#team" class="text-gray-400 hover:text-emerald-400 transition">Team</a>
+      <a href="#contact" class="text-gray-400 hover:text-emerald-400 transition">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="relative w-full pt-24 overflow-hidden" style="min-height: calc(90 * min(var(--vh, 1vh), 1vh));">
+  <div class="absolute inset-0">
+    <img data-template-id="hero-img"
+         class="canva-image w-full h-full object-cover opacity-40"
+         loading="lazy"
+         src="https://images.pexels.com/photos/10325707/pexels-photo-10325707.png?auto=compress&amp;cs=tinysrgb&amp;w=1920"
+         alt="Vibrant orange lines and dots form an abstract network on a dark background, evoking technology and connectivity.">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-950/60 via-gray-950/80 to-gray-950"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 flex items-center h-full py-32">
+    <div class="max-w-2xl animate-fade-up">
+      <div class="inline-block px-3 py-1 rounded border border-emerald-500/40 text-emerald-400 text-xs font-mono-heading mb-6 tracking-wider">
+        // ENGINEERING TOMORROW
+      </div>
+      <h1 data-template-id="hero-title" class="canva-text font-mono-heading leading-tight glow-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 42px;">
+        World-Class Software, Built to Solve Africa's Hardest Problems
+      </h1>
+      <p data-template-id="hero-subtitle" class="canva-text mt-6 text-lg leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 18px;">
+        From a small team in Akwa Ibom, we design and engineer technology that stands toe-to-toe with the best in the world — powering government agencies, hospitals, schools, hotels, restaurants, law firms, and businesses across Africa. We believe Africa's problems deserve solutions built with genuine ambition, not shortcuts, and we're building the tools to prove it.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#contact" data-template-id="hero-cta" class="canva-button inline-block px-8 py-4 rounded font-mono-heading font-bold text-sm uppercase tracking-widest transition hover:shadow-[0_0_30px_rgba(16,185,129,0.4)]" style="background: rgb(16, 185, 129); color: rgb(10, 10, 15); font-weight: 700; font-style: normal; font-size: 16px;">
+          Get In Touch →
+        </a>
+        <a href="#services" class="inline-flex items-center gap-2 px-8 py-4 rounded font-mono-heading font-bold text-sm uppercase tracking-widest border border-emerald-500/40 text-emerald-400 transition hover:border-emerald-400 hover:bg-emerald-500/10">
+          View Our Work
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Stats -->
+  <section class="w-full py-12 border-t border-emerald-500/10">
+   <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="stat-card rounded-xl p-6 text-center bg-gray-900/50">
+     <div data-template-id="stat-1-number" class="canva-text font-mono-heading font-bold" style="color: rgb(16, 185, 129); font-weight: 700; font-style: normal; font-size: 34px;">15+</div>
+     <div data-template-id="stat-1-label" class="canva-text mt-2 text-sm" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 14px;">Projects Delivered</div>
+    </div>
+    <div class="stat-card rounded-xl p-6 text-center bg-gray-900/50">
+     <div data-template-id="stat-2-number" class="canva-text font-mono-heading font-bold" style="color: rgb(16, 185, 129); font-weight: 700; font-style: normal; font-size: 34px;">10+</div>
+     <div data-template-id="stat-2-label" class="canva-text mt-2 text-sm" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 14px;">Happy Clients</div>
+    </div>
+    <div class="stat-card rounded-xl p-6 text-center bg-gray-900/50">
+     <div data-template-id="stat-3-number" class="canva-text font-mono-heading font-bold" style="color: rgb(16, 185, 129); font-weight: 700; font-style: normal; font-size: 34px;">13+</div>
+     <div data-template-id="stat-3-label" class="canva-text mt-2 text-sm" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 14px;">Industries Served</div>
+    </div>
+    <div class="stat-card rounded-xl p-6 text-center bg-gray-900/50">
+     <div data-template-id="stat-4-number" class="canva-text font-mono-heading font-bold" style="color: rgb(16, 185, 129); font-weight: 700; font-style: normal; font-size: 34px;">2024</div>
+     <div data-template-id="stat-4-label" class="canva-text mt-2 text-sm" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 14px;">Founded</div>
+    </div>
+   </div>
+  </section>
+
+<!-- What We Build (merged Services + Portfolio) -->
+  <section id="services" class="w-full py-24">
+   <div class="max-w-7xl mx-auto px-6">
+    <div class="text-emerald-400 font-mono-heading text-xs tracking-widest mb-4 text-center">// OUR SOFTWARE</div>
+    <h2 data-template-id="services-title" class="canva-text font-mono-heading text-center" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 30px;">What We Build</h2>
+    <p data-template-id="services-subtitle" class="canva-text text-center mt-4 max-w-2xl mx-auto" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">Comprehensive software solutions tailored for African businesses and institutions — built to be affordable without compromising quality.</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+
+     <div data-template-id="service-govt" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-1" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-govt-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Dynamic urban scene showcasing interconnected light trails representing digital communication networks.">
+      <div class="p-5">
+       <h3 data-template-id="service-govt-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Government &amp; Ministry Software</h3>
+       <p data-template-id="service-govt-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Custom portals, document management systems, and citizen-facing platforms for government agencies and ministries at all levels.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-health" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-2" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-health-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/11288664/pexels-photo-11288664.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Close-up of advanced radiotherapy equipment with control panel and screen.">
+      <div class="p-5">
+       <h3 data-template-id="service-health-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Health Technology</h3>
+       <p data-template-id="service-health-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Hospital management, clinic systems, pharmacy software, and laboratory information systems — digitising healthcare delivery across Africa.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-edu" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-3" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-edu-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/10638082/pexels-photo-10638082.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Children engaged in learning at a computer lab, using computers in a classroom setting.">
+      <div class="p-5">
+       <h3 data-template-id="service-edu-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Education Management</h3>
+       <p data-template-id="service-edu-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">School management for high schools and universities — library systems, result management, student portals, and more.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-inventory" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-4" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-inventory-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/4921255/pexels-photo-4921255.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A person uses a tablet-based point-of-sale system by selecting options on a touchscreen device.">
+      <div class="p-5">
+       <h3 data-template-id="service-inventory-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Inventory &amp; POS</h3>
+       <p data-template-id="service-inventory-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Cloud-based point-of-sale applications and inventory management software for retail, wholesale, and distribution businesses.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-realestate" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-5" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-realestate-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/18441128/pexels-photo-18441128.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Stunning view of modern skyscrapers in an urban cityscape at night.">
+      <div class="p-5">
+       <h3 data-template-id="service-realestate-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Real Estate Software</h3>
+       <p data-template-id="service-realestate-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">CRM solutions for real estate companies — manage listings, leads, tenants, and transactions from one powerful dashboard.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-ml" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-6" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-ml-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/17483870/pexels-photo-17483870.png?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Abstract illustration depicting complex digital neural networks and data flow.">
+      <div class="p-5">
+       <h3 data-template-id="service-ml-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Machine Learning &amp; AI</h3>
+       <p data-template-id="service-ml-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Custom ML models, predictive analytics, and intelligent automation solutions to give your business a competitive edge.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-hr" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-7" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-hr-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/3183131/pexels-photo-3183131.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Coworkers analyzing data charts on laptops during a team meeting.">
+      <div class="p-5">
+       <h3 data-template-id="service-hr-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">HR Management Software</h3>
+       <p data-template-id="service-hr-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Complete human resource management systems — payroll, attendance, leave management, recruitment pipelines, and employee self-service portals.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-hotel" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-8" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-hotel-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/5371683/pexels-photo-5371683.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A close-up view of a hotel reception counter with a classic bell and warm lighting.">
+      <div class="p-5">
+       <h3 data-template-id="service-hotel-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Hotel Management Software</h3>
+       <p data-template-id="service-hotel-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">End-to-end hotel management — reservations, room allocation, housekeeping, billing, and guest experience platforms for hotels of all sizes.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-restaurant" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-9" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-restaurant-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/12935078/pexels-photo-12935078.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A person using a touchscreen ordering system in a modern restaurant setting.">
+      <div class="p-5">
+       <h3 data-template-id="service-restaurant-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Restaurant Management Software</h3>
+       <p data-template-id="service-restaurant-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Digital ordering systems, kitchen display screens, table management, menu builders, and analytics dashboards for restaurants and food businesses.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-law" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-10" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-law-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/8112159/pexels-photo-8112159.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A lawyer consulting with a client in a modern office setting.">
+      <div class="p-5">
+       <h3 data-template-id="service-law-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Law Firm &amp; Legal Practice Software</h3>
+       <p data-template-id="service-law-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Case management, client intake, document automation, billing, and secure record systems built for law firms and legal practices.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-accounting" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-11" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-accounting-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/259257/pexels-photo-259257.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Close-up of accounting documents, calculator, and financial statements on a desk.">
+      <div class="p-5">
+       <h3 data-template-id="service-accounting-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Accounting &amp; Financial Software</h3>
+       <p data-template-id="service-accounting-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Bookkeeping, invoicing, payroll, tax, and reporting tools that give accounting firms and finance teams full control of the books.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-attendance" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-12" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-attendance-img" class="canva-image w-full h-44 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/278430/pexels-photo-278430.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="QR code attendance scanning on a mobile device.">
+      <div class="p-5">
+       <h3 data-template-id="service-attendance-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">QR &amp; Face Attendance Systems</h3>
+       <p data-template-id="service-attendance-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Smart attendance solutions powered by QR codes and facial recognition for schools, offices, and events.</p>
+      </div>
+     </div>
+
+    </div>
+   </div>
+  </section>
+
+<!-- Mobile App Development -->
+  <section class="w-full py-24 border-t border-emerald-500/10">
+   <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div>
+     <div class="text-emerald-400 font-mono-heading text-xs tracking-widest mb-4">
+      // MOBILE SOLUTIONS
+     </div>
+     <h2 data-template-id="mobile-title" class="canva-text font-mono-heading" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 26px;">Mobile Application Development</h2>
+     <p data-template-id="mobile-desc" class="canva-text mt-6 leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">We design and develop high-performance mobile applications for iOS and Android. From concept to deployment on the App Store and Play Store, we build native and cross-platform apps that your users will love — whether it's a customer-facing product, an internal tool, or a companion app for your existing software.</p>
+     <div class="mt-6 flex flex-wrap gap-3"><span class="px-3 py-1 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono-heading">iOS</span> <span class="px-3 py-1 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono-heading">Android</span> <span class="px-3 py-1 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono-heading">Cross-Platform</span> <span class="px-3 py-1 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono-heading">React Native</span>
+     </div>
+    </div><img data-template-id="mobile-img" class="canva-image w-full h-80 object-cover rounded-xl border border-emerald-500/20" loading="lazy" src="https://images.pexels.com/photos/89955/pexels-photo-89955.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Dark-themed close-up of a smartphone screen highlighting various apps and touchscreen technology.">
+   </div>
+  </section>
+
+<!-- Tech Stack -->
+  <section class="w-full py-16 border-t border-emerald-500/10">
+   <div class="max-w-5xl mx-auto px-6 text-center">
+    <div class="text-emerald-400 font-mono-heading text-xs tracking-widest mb-4">// TECH STACK</div>
+    <h2 class="canva-text font-mono-heading" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 22px;">Built With Modern, Proven Technology</h2>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+     <span class="badge-pill px-4 py-2 rounded-full bg-gray-900/60 border border-emerald-500/15 text-gray-300 text-xs font-mono-heading">React</span>
+     <span class="badge-pill px-4 py-2 rounded-full bg-gray-900/60 border border-emerald-500/15 text-gray-300 text-xs font-mono-heading">Node.js</span>
+     <span class="badge-pill px-4 py-2 rounded-full bg-gray-900/60 border border-emerald-500/15 text-gray-300 text-xs font-mono-heading">Python</span>
+     <span class="badge-pill px-4 py-2 rounded-full bg-gray-900/60 border border-emerald-500/15 text-gray-300 text-xs font-mono-heading">Flutter</span>
+     <span class="badge-pill px-4 py-2 rounded-full bg-gray-900/60 border border-emerald-500/15 text-gray-300 text-xs font-mono-heading">React Native</span>
+     <span class="badge-pill px-4 py-2 rounded-full bg-gray-900/60 border border-emerald-500/15 text-gray-300 text-xs font-mono-heading">PostgreSQL</span>
+     <span class="badge-pill px-4 py-2 rounded-full bg-gray-900/60 border border-emerald-500/15 text-gray-300 text-xs font-mono-heading">Cloud &amp; DevOps</span>
+     <span class="badge-pill px-4 py-2 rounded-full bg-gray-900/60 border border-emerald-500/15 text-gray-300 text-xs font-mono-heading">Machine Learning</span>
+    </div>
+   </div>
+  </section>
+
+<!-- Other Services & Coming Soon -->
+  <section id="other-services" class="w-full py-24 border-t border-emerald-500/10">
+   <div class="max-w-7xl mx-auto px-6">
+    <div class="text-emerald-400 font-mono-heading text-xs tracking-widest mb-4 text-center">// BEYOND SOFTWARE</div>
+    <h2 data-template-id="other-services-title" class="canva-text font-mono-heading text-center" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 28px;">Other Services &amp; Coming Soon</h2>
+    <p data-template-id="other-services-subtitle" class="canva-text text-center mt-4 max-w-2xl mx-auto" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">Beyond software, we provide physical technology installations and are expanding into exciting new frontiers.</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+
+     <div data-template-id="service-cctv" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-1" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-cctv-img" class="canva-image w-full h-40 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/5966513/pexels-photo-5966513.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Modern camera for recording audio and video in building for security and protection.">
+      <div class="p-5">
+       <h3 data-template-id="service-cctv-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">CCTV &amp; Camera Installations</h3>
+       <p data-template-id="service-cctv-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Professional installation of surveillance cameras, CCTV systems, and security monitoring for homes, offices, and commercial buildings.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-solar" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-2" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-solar-img" class="canva-image w-full h-40 object-cover opacity-80" loading="lazy" src="https://images.pexels.com/photos/14613939/pexels-photo-14613939.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Technician installing solar panels on a rooftop under a clear sky.">
+      <div class="p-5">
+       <h3 data-template-id="service-solar-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Solar Panel Installation</h3>
+       <p data-template-id="service-solar-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Reliable solar power systems — panel installation, inverters, and battery backup solutions for homes, offices, and businesses facing unstable power.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-smarthome" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-3 relative" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-smarthome-img" class="canva-image w-full h-40 object-cover opacity-60" loading="lazy" src="https://images.pexels.com/photos/16423104/pexels-photo-16423104.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A modern kitchen with a touchscreen smart home control panel integrated into a hexagon-patterned wall.">
+      <div class="absolute top-3 right-3 px-2 py-1 rounded bg-emerald-500 text-gray-950 text-xs font-mono-heading font-bold uppercase tracking-wider">
+       Coming Soon
+      </div>
+      <div class="p-5">
+       <h3 data-template-id="service-smarthome-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Smart Home Automation</h3>
+       <p data-template-id="service-smarthome-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Intelligent home automation — lighting control, security systems, climate management, and IoT integration. Launching soon.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-robotics" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-4 relative" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-robotics-img" class="canva-image w-full h-40 object-cover opacity-60" loading="lazy" src="https://images.pexels.com/photos/8294612/pexels-photo-8294612.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Detailed close-up of a robot's mechanical components, emphasized by moody studio lighting.">
+      <div class="absolute top-3 right-3 px-2 py-1 rounded bg-emerald-500 text-gray-950 text-xs font-mono-heading font-bold uppercase tracking-wider">
+       Coming Soon
+      </div>
+      <div class="p-5">
+       <h3 data-template-id="service-robotics-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Robotics &amp; Automation</h3>
+       <p data-template-id="service-robotics-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Industrial and educational robotics solutions — from automated manufacturing tools to programmable learning kits for schools.</p>
+      </div>
+     </div>
+
+     <div data-template-id="service-events" class="canva-card tech-card rounded-xl overflow-hidden animate-fade-up delay-5 relative" style="background: rgb(17, 17, 24);">
+      <img data-template-id="service-events-img" class="canva-image w-full h-40 object-cover opacity-60" loading="lazy" src="https://images.pexels.com/photos/6949886/pexels-photo-6949886.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="A conference room setup with tablets, microphones, and water bottles for a professional meeting.">
+      <div class="absolute top-3 right-3 px-2 py-1 rounded bg-emerald-500 text-gray-950 text-xs font-mono-heading font-bold uppercase tracking-wider">
+       Coming Soon
+      </div>
+      <div class="p-5">
+       <h3 data-template-id="service-events-title" class="canva-text font-mono-heading text-base" style="color: rgb(16, 185, 129); font-weight: 600; font-style: normal; font-size: 19px;">Events Management System</h3>
+       <p data-template-id="service-events-desc" class="canva-text mt-2 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">End-to-end event planning software — ticketing, guest management, venue coordination, and real-time analytics for conferences and events.</p>
+      </div>
+     </div>
+
+    </div>
+   </div>
+  </section>
+
+<!-- About -->
+  <section id="about" class="w-full py-24 border-t border-emerald-500/10">
+   <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div>
+     <div class="text-emerald-400 font-mono-heading text-xs tracking-widest mb-4">
+      $ cat our_story.md
+     </div>
+     <h2 data-template-id="about-title" class="canva-text font-mono-heading" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 26px;">Our Story</h2>
+     <p data-template-id="about-text1" class="canva-text mt-6 leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">It started in university. Sylvester and Ebube met as Software Engineering students at Topfaith University, and from day one, the chemistry was undeniable. What began as small freelance jobs — building apps and websites for local businesses and companies to earn some extra money as students — slowly turned into something bigger.</p>
+     <p data-template-id="about-text2" class="canva-text mt-4 leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Project after project, we kept getting better and kept getting referred to new clients. Attendance systems powered by QR codes and facial recognition, a cafeteria management system for our own university, mobile apps, and business websites — we were building, testing, breaking, and rebuilding until things worked. Eventually, the side hustle had a name and a direction of its own.</p>
+     <p data-template-id="about-text3" class="canva-text mt-4 leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Acies Africa Technologies was founded in 2024 with a clear mission: deliver world-class software to African businesses at prices that don't break the bank. In January 2026, we made it official with our Corporate Affairs Commission registration. From government ministries to neighbourhood clinics, from school campuses to hotel lobbies — we build solutions that work for Africa's unique landscape. And we're just getting started.</p>
+     <div class="mt-8 flex flex-wrap gap-3">
+      <div class="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded">
+       <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i><span data-template-id="location-1" class="canva-text text-sm" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Akwa Ibom (HQ)</span>
+      </div>
+      <div class="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded">
+       <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i><span data-template-id="location-2" class="canva-text text-sm" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Abuja</span>
+      </div>
+      <div class="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded">
+       <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i><span data-template-id="location-3" class="canva-text text-sm" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Port Harcourt</span>
+      </div>
+      <div class="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded">
+       <i data-lucide="badge-check" class="w-4 h-4 text-emerald-400"></i><span data-template-id="location-4" class="canva-text text-sm" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">CAC Registered — RC-XXXXXXX</span>
+      </div>
+     </div>
+    </div><img data-template-id="about-img" class="canva-image w-full h-96 object-cover rounded-xl border border-emerald-500/20" loading="lazy" src="https://images.pexels.com/photos/6804068/pexels-photo-6804068.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Team of developers working together on computers in a modern tech office.">
+   </div>
+  </section>
+
+<!-- How We Work -->
+  <section id="process" class="w-full py-24 border-t border-emerald-500/10">
+   <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 data-template-id="process-title" class="canva-text font-mono-heading" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 26px;">How We Work</h2>
+    <p data-template-id="process-subtitle" class="canva-text mt-4 max-w-2xl mx-auto" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">A streamlined process that takes you from idea to deployed product — fast.</p>
+    <div class="grid md:grid-cols-4 gap-8 mt-16">
+     <div class="text-center animate-fade-up delay-1">
+      <div class="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto">
+       <i data-lucide="message-circle" class="w-6 h-6 text-emerald-400"></i>
+      </div>
+      <h3 data-template-id="process-step1-title" class="canva-text mt-4 font-mono-heading text-sm font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Discovery</h3>
+      <p data-template-id="process-step1-desc" class="canva-text mt-2 text-sm" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">We listen to your needs, understand your business, and map out the perfect solution.</p>
+     </div>
+     <div class="text-center animate-fade-up delay-2">
+      <div class="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto">
+       <i data-lucide="pen-tool" class="w-6 h-6 text-emerald-400"></i>
+      </div>
+      <h3 data-template-id="process-step2-title" class="canva-text mt-4 font-mono-heading text-sm font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Design</h3>
+      <p data-template-id="process-step2-desc" class="canva-text mt-2 text-sm" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Beautiful, intuitive interfaces crafted for your users and your brand.</p>
+     </div>
+     <div class="text-center animate-fade-up delay-3">
+      <div class="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto">
+       <i data-lucide="code" class="w-6 h-6 text-emerald-400"></i>
+      </div>
+      <h3 data-template-id="process-step3-title" class="canva-text mt-4 font-mono-heading text-sm font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Develop</h3>
+      <p data-template-id="process-step3-desc" class="canva-text mt-2 text-sm" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Clean, scalable code built with modern technologies and best practices.</p>
+     </div>
+     <div class="text-center animate-fade-up delay-4">
+      <div class="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto">
+       <i data-lucide="rocket" class="w-6 h-6 text-emerald-400"></i>
+      </div>
+      <h3 data-template-id="process-step4-title" class="canva-text mt-4 font-mono-heading text-sm font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Deploy &amp; Support</h3>
+      <p data-template-id="process-step4-desc" class="canva-text mt-2 text-sm" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">We launch your product and provide ongoing maintenance and support.</p>
+     </div>
+    </div>
+   </div>
+  </section>
+
+<!-- Partners -->
+  <section class="w-full py-24 border-t border-emerald-500/10">
+   <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 data-template-id="partners-title" class="canva-text font-mono-heading" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 26px;">Our Partners</h2>
+    <p data-template-id="partners-desc" class="canva-text mt-4 max-w-2xl mx-auto" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">We collaborate with other technology companies to ensure our services are delivered at the highest standard. Together, we bring more expertise, more resources, and better outcomes to every project.</p>
+    <div class="mt-12 flex flex-wrap justify-center gap-6">
+     <div class="px-8 py-4 rounded-xl bg-gray-900/50 border border-emerald-500/15 flex items-center gap-3">
+      <i data-lucide="handshake" class="w-5 h-5 text-emerald-400"></i><span data-template-id="partner-1" class="canva-text font-mono-heading text-sm" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Cloud Infrastructure Partners</span>
+     </div>
+     <div class="px-8 py-4 rounded-xl bg-gray-900/50 border border-emerald-500/15 flex items-center gap-3">
+      <i data-lucide="handshake" class="w-5 h-5 text-emerald-400"></i><span data-template-id="partner-2" class="canva-text font-mono-heading text-sm" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Security &amp; Compliance Allies</span>
+     </div>
+     <div class="px-8 py-4 rounded-xl bg-gray-900/50 border border-emerald-500/15 flex items-center gap-3">
+      <i data-lucide="handshake" class="w-5 h-5 text-emerald-400"></i><span data-template-id="partner-3" class="canva-text font-mono-heading text-sm" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Hardware &amp; IoT Collaborators</span>
+     </div>
+    </div>
+   </div>
+  </section>
+
+<!-- Team -->
+  <section id="team" class="w-full py-24 border-t border-emerald-500/10">
+   <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 data-template-id="team-title" class="canva-text font-mono-heading" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 26px;">Meet the Management Team</h2>
+    <p data-template-id="team-subtitle" class="canva-text mt-4 max-w-2xl mx-auto" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">The minds building Africa's next generation of software — backed by a growing team of 10+ engineers, designers, and support staff worldwide.</p>
+    <div class="grid md:grid-cols-3 gap-12 mt-16 max-w-5xl mx-auto">
+     <div class="text-center"><img data-template-id="team-ceo-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="image1.jpeg" alt="Portrait of Sylvester Edidiong, Founder and CEO of Acies Africa Technologies.">
+      <h3 data-template-id="team-ceo-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Sylvester Edidiong</h3>
+      <p data-template-id="team-ceo-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Founder &amp; CEO</p>
+      <p data-template-id="team-ceo-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate of Topfaith University. Visionary leader passionate about leveraging technology to solve real African problems at scale.</p>
+     </div>
+     <div class="text-center"><img data-template-id="team-cto-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="image2.jpeg" alt="Portrait of Ebube Onyepke, Chief Technology Officer of Acies Africa Technologies.">
+      <h3 data-template-id="team-cto-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Ebube Onyepke</h3>
+      <p data-template-id="team-cto-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Chief Technology Officer</p>
+      <p data-template-id="team-cto-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate from Topfaith University. Technical architect who has co-built multiple software products and leads the engineering vision at Acies Africa.</p>
+     </div>
+     <div class="text-center"><img data-template-id="team-eng-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="image3.jpeg" alt="Portrait of Chimah Chidozie, Software Engineer at Acies Africa Technologies.">
+      <h3 data-template-id="team-eng-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Chimah Chidozie</h3>
+      <p data-template-id="team-eng-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Chief Data Officer</p>
+      <p data-template-id="team-eng-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate and coursemate of Sylvester and Ebube at Topfaith University. A software engineer and data scientist who leads analytics, data-driven features, and intelligent systems across the Acies Africa stack.</p>
+     </div>
+    </div>
+    <div class="mt-14 inline-flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/20 px-6 py-3 rounded-full">
+     <i data-lucide="globe" class="w-5 h-5 text-emerald-400"></i>
+     <span data-template-id="team-extra" class="canva-text font-mono-heading text-sm" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">+10 staff worldwide, and growing</span>
+    </div>
+   </div>
+  </section>
+
+<!-- Trust / Registration -->
+  <section id="trust" class="w-full py-16 border-t border-emerald-500/10">
+   <div class="max-w-4xl mx-auto px-6">
+    <div class="tech-card rounded-xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 bg-gray-900/40">
+     <div class="w-16 h-16 shrink-0 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
+      <i data-lucide="shield-check" class="w-8 h-8 text-emerald-400"></i>
+     </div>
+     <div class="text-center md:text-left">
+      <div data-template-id="trust-eyebrow" class="canva-text font-mono-heading text-xs tracking-widest text-emerald-400 mb-2">// VERIFIED BUSINESS</div>
+      <h3 data-template-id="trust-title" class="canva-text font-mono-heading" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 20px;">Registered with the Corporate Affairs Commission, Nigeria</h3>
+      <p data-template-id="trust-desc" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Acies Africa Technologies is a duly incorporated company under Nigerian law, registered in January 2026. Registration No. <span data-template-id="trust-rc" style="color: rgb(16,185,129); font-weight:600;">RC-XXXXXXX</span>. Verifiable via the CAC public search portal.</p>
+     </div>
+    </div>
+    <div class="mt-8 flex justify-center">
+     <img data-template-id="trust-cac-cert" class="canva-image rounded-xl border border-emerald-500/25 shadow-[0_0_30px_rgba(16,185,129,0.1)]" style="max-width: 420px; width: 100%;" loading="lazy" src="cacimage.jpg" alt="Acies Africa Technologies Corporate Affairs Commission (CAC) registration certificate.">
+    </div>
+   </div>
+  </section>
+
+<!-- Contact -->
+  <section id="contact" class="w-full py-24 border-t border-emerald-500/10">
+   <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 data-template-id="contact-title" class="canva-text font-mono-heading" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 26px;">Let's Build Something Together</h2>
+    <p data-template-id="contact-subtitle" class="canva-text mt-4 max-w-xl mx-auto" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">Ready to digitise your business? Reach out and let's discuss how we can help you grow with affordable, reliable technology.</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-12"><a href="https://wa.me/2348143972347" target="_blank" rel="noopener noreferrer" data-template-id="contact-whatsapp" class="canva-button flex items-center gap-3 px-6 py-3 rounded font-mono-heading font-bold text-sm uppercase tracking-wider transition hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]" style="background: rgb(16, 185, 129); color: rgb(10, 10, 15); font-weight: 700; font-style: normal; font-size: 16px;">WhatsApp</a> <a href="mailto:aciesafricatech@gmail.com" target="_blank" rel="noopener noreferrer" data-template-id="contact-email" class="canva-button flex items-center gap-3 px-6 py-3 rounded font-mono-heading font-bold text-sm uppercase tracking-wider transition hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]" style="background: rgb(31, 41, 55); color: rgb(16, 185, 129); font-weight: 700; font-style: normal; font-size: 16px;">Email</a> <a href="https://instagram.com/aciesafricatechnologies" target="_blank" rel="noopener noreferrer" data-template-id="contact-ig" class="canva-button flex items-center gap-3 px-6 py-3 rounded font-mono-heading font-bold text-sm uppercase tracking-wider transition hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]" style="background: linear-gradient(135deg, rgb(124, 58, 237), rgb(236, 72, 153)); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Instagram</a>
+    </div>
+   </div>
+  </section>
+
+<!-- Footer -->
+  <footer data-template-id="footer-section" class="canva-footer w-full py-8 text-center border-t border-emerald-500/10" style="background: rgb(5, 5, 8);">
+   <p data-template-id="footer-text" class="canva-text text-sm font-mono-heading" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">© 2025 Powered by Acies Africa Technologies. All rights reserved.</p>
+  </footer>
+  <script src="/_sdk/editing_sdk.js"></script>
+  <script>lucide.createIcons();</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a102b5a3b7d048ed',t:'MTc4MjIwOTQ5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body></html>
