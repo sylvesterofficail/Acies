@@ -396,33 +396,62 @@
   </section>
 
 <!-- Team -->
-  <section id="team" class="w-full py-24 border-t border-emerald-500/10">
-   <div class="max-w-7xl mx-auto px-6 text-center">
+<section id="team" class="w-full py-24 border-t border-emerald-500/10">
+  <div class="max-w-7xl mx-auto px-6 text-center">
     <h2 data-template-id="team-title" class="canva-text font-mono-heading" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 26px;">Meet the Management Team</h2>
     <p data-template-id="team-subtitle" class="canva-text mt-4 max-w-2xl mx-auto" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">The minds building Africa's next generation of software — backed by a growing team of 10+ engineers, designers, and support staff worldwide.</p>
-    <div class="grid md:grid-cols-3 gap-12 mt-16 max-w-5xl mx-auto">
-     <div class="text-center"><img data-template-id="team-ceo-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="image1.jpeg" alt="Portrait of Sylvester Edidiong, Founder and CEO of Acies Africa Technologies.">
-      <h3 data-template-id="team-ceo-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Sylvester Edidiong</h3>
-      <p data-template-id="team-ceo-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Founder &amp; CEO</p>
-      <p data-template-id="team-ceo-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate of Topfaith University. Visionary leader passionate about leveraging technology to solve real African problems at scale.</p>
-     </div>
-     <div class="text-center"><img data-template-id="team-cto-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="image2.jpeg" alt="Portrait of Ebube Onyepke, Chief Technology Officer of Acies Africa Technologies.">
-      <h3 data-template-id="team-cto-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Ebube Onyepke</h3>
-      <p data-template-id="team-cto-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Chief Technology Officer</p>
-      <p data-template-id="team-cto-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate from Topfaith University. Technical architect who has co-built multiple software products and leads the engineering vision at Acies Africa.</p>
-     </div>
-     <div class="text-center"><img data-template-id="team-eng-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="image3.jpeg" alt="Portrait of Chimah Chidozie, Software Engineer at Acies Africa Technologies.">
-      <h3 data-template-id="team-eng-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Chimah Chidozie</h3>
-      <p data-template-id="team-eng-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Chief Data Officer</p>
-      <p data-template-id="team-eng-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate and coursemate of Sylvester and Ebube at Topfaith University. A software engineer and data scientist who leads analytics, data-driven features, and intelligent systems across the Acies Africa stack.</p>
-     </div>
+    
+    <!-- Expanded Responsive Grid to support 5 members gracefully across mobile, tablet, and large desktops -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-12 mt-16 max-w-7xl mx-auto items-start">
+      
+      <!-- Member 1: Sylvester -->
+      <div class="text-center">
+        <img data-template-id="team-ceo-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="image1.jpeg" alt="Portrait of Sylvester Edidiong, Founder and CEO of Acies Africa Technologies.">
+        <h3 data-template-id="team-ceo-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Sylvester Edidiong</h3>
+        <p data-template-id="team-ceo-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Founder &amp; CEO</p>
+        <p data-template-id="team-ceo-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate of Topfaith University. Visionary leader passionate about leveraging technology to solve real African problems at scale.</p>
+      </div>
+
+      <!-- Member 2: Nmesoma (Added with kelly.jpeg source) -->
+      <div class="text-center">
+        <img data-template-id="team-co-founder-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="kelly.jpeg" alt="Portrait of Nmesoma Kelly, Co-Founder and Software Engineer at Acies Africa Technologies.">
+        <h3 data-template-id="team-co-founder-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Nmesoma Kelly</h3>
+        <p data-template-id="team-co-founder-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Co-Founder &amp; Software Engineer</p>
+        <p data-template-id="team-co-founder-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate from Topfaith University. Co-founder orchestrating agile engineering pipelines, system design patterns, and cross-functional product deployment cycles.</p>
+      </div>
+
+      <!-- Member 3: Ebube -->
+      <div class="text-center">
+        <img data-template-id="team-cto-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="image2.jpeg" alt="Portrait of Ebube Onyepke, Chief Technology Officer of Acies Africa Technologies.">
+        <h3 data-template-id="team-cto-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Ebube Onyepke</h3>
+        <p data-template-id="team-cto-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Chief Technology Officer</p>
+        <p data-template-id="team-cto-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate from Topfaith University. Technical architect who has co-built multiple software products and leads the engineering vision at Acies Africa.</p>
+      </div>
+
+      <!-- Member 4: Chimah -->
+      <div class="text-center">
+        <img data-template-id="team-eng-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="image3.jpeg" alt="Portrait of Chimah Chidozie, Software Engineer at Acies Africa Technologies.">
+        <h3 data-template-id="team-eng-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Chimah Chidozie</h3>
+        <p data-template-id="team-eng-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Chief Data Officer</p>
+        <p data-template-id="team-eng-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate and coursemate of Sylvester and Ebube at Topfaith University. A software engineer and data scientist who leads analytics, data-driven features, and intelligent systems across the Acies Africa stack.</p>
+      </div>
+
+      <!-- Member 5: Utibe (Added with obot.jpeg source) -->
+      <div class="text-center">
+        <img data-template-id="team-dev-img" class="canva-image w-40 h-40 rounded-full mx-auto object-cover border-4 border-emerald-500 avatar-glow" loading="lazy" src="obot.jpeg" alt="Portrait of Utibe Obot, Software Engineer at Acies Africa Technologies.">
+        <h3 data-template-id="team-dev-name" class="canva-text mt-6 font-mono-heading font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Utibe Obot</h3>
+        <p data-template-id="team-dev-role" class="canva-text mt-1" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineer</p>
+        <p data-template-id="team-dev-bio" class="canva-text mt-3 text-sm leading-relaxed" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">Software Engineering graduate from Topfaith University. Full-stack infrastructure systems engineer specializing in building performance-optimized cloud architectures and core logic APIs.</p>
+      </div>
+
     </div>
+    
     <div class="mt-14 inline-flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/20 px-6 py-3 rounded-full">
-     <i data-lucide="globe" class="w-5 h-5 text-emerald-400"></i>
-     <span data-template-id="team-extra" class="canva-text font-mono-heading text-sm" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">+10 staff worldwide, and growing</span>
+      <i data-lucide="globe" class="w-5 h-5 text-emerald-400"></i>
+      <span data-template-id="team-extra" class="canva-text font-mono-heading text-sm" style="color: rgb(16, 185, 129); font-weight: 400; font-style: normal; font-size: 16px;">+10 staff worldwide, and growing</span>
     </div>
-   </div>
-  </section>
+  </div>
+</section>
 
 <!-- Trust / Registration -->
   <section id="trust" class="w-full py-16 border-t border-emerald-500/10">
