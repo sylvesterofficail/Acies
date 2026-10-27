@@ -5,6 +5,7 @@
 import type { StaticImageData } from "next/image";
 import sylvester from "@/assets/team/sylvester.jpeg";
 import ebube from "@/assets/team/ebube.jpeg";
+import chimah from "@/assets/team/chimah.jpeg";
 
 export const contact = {
   phoneDisplay: "+234 814 397 2347",
@@ -184,12 +185,7 @@ export const team: Member[] = [
     role: "Data Officer & Software Engineer",
     focus: "Designs the databases, reports and data pipelines our systems run on.",
     degree: "B.Sc. Software Engineering",
-  },
-  {
-    name: "Unyime Etuk",
-    role: "Software Tester & Architecture Design",
-    focus: "Tests every release and designs system architecture so it holds up under real use.",
-    degree: "B.Eng. Computer Engineering",
+    photo: chimah,
   },
 ];
 

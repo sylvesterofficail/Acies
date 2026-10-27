@@ -23,12 +23,12 @@ export default function TeamPage() {
   return (
     <>
       <PageHero kicker="Our team" title="The team behind the work."
-        lede="Engineers, testers, data specialists and installers who design, build and fit every system themselves. When you work with Acies, these are the people on your project." />
+        lede="Engineers, data specialists and installers who design, build and fit every system themselves. When you work with Acies, these are the people on your project." />
 
       {/* ---------- Core team ---------- */}
       <section className="pb-24">
         <div className="shell">
-          <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {team.map((m) => (
               <StaggerItem key={m.name}>
                 <TiltCard className="h-full">

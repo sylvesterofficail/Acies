@@ -118,10 +118,10 @@ export default function Home() {
         <div className="shell grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <h2 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">The team behind the work</h2>
-            <p className="lede mt-5">Software engineers, data and testing specialists, and installers who build and fit every system themselves. No outsourcing, no middlemen.</p>
+            <p className="lede mt-5">Software engineers, data specialists and installers who build and fit every system themselves. No outsourcing, no middlemen.</p>
             <Link href="/team/" className="btn-primary mt-8">Meet the team <Icon name="arrow" className="h-4 w-4" /></Link>
           </Reveal>
-          <Stagger className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <Stagger className="grid grid-cols-2 gap-4 sm:gap-5 lg:max-w-[560px] lg:justify-self-end">
             {team.map((m) => (
               <StaggerItem key={m.name}>
                 <Link href="/team/" className="group block">
