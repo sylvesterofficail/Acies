@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "npx serve out"
+    "start": "npx serve out",
+    "publish:pages": "BASE_PATH=/Acies next build && cp -r out/. ./"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",

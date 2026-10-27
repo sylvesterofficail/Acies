@@ -24,7 +24,17 @@ npm run build    # static site in ./out
 
 ## Publishing
 
-Every push to `main` builds and publishes the site through GitHub Actions (`.github/workflows/deploy.yml`).
-One-time setup: in the repo go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
+GitHub Pages currently serves the built files committed at the root of `main`
+(`index.html`, `about/`, `services/`, `team/`, `contact/`, `_next/`, `404.html`).
+After changing anything in `src/`, rebuild and commit them:
+
+```bash
+npm run publish:pages   # builds for /Acies and copies the result to the repo root
+git add -A && git commit -m "Update site" && git push
+```
+
+Automatic publishing is also set up in `.github/workflows/deploy.yml`. It needs GitHub Actions
+to be available on the account; then set **Settings → Pages → Source** to **GitHub Actions**
+and the manual step above is no longer needed.
 
 Unused photos waiting to be assigned are in `src/assets/team/unassigned-*.jpeg`. Original logo files are in `brand-source/`.
