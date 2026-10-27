@@ -11,7 +11,7 @@ import { contact, industries, partners, services, supportingStaff, team } from "
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Acies Africa Technologies is a CAC-registered technology company in Ikot Ekpene, Akwa Ibom, building software and installing CCTV and solar for organisations across Nigeria.",
+  description: "Acies Africa Technologies is a CAC-registered technology company in Abuja, Port Harcourt and Akwa Ibom, building software and installing CCTV and solar for organisations across Nigeria.",
 };
 
 const principles = [
@@ -38,7 +38,7 @@ export default function AboutPage() {
               So we built a company that does all of it. Our engineers write the software, our installers fit the hardware, and the same team stays to keep everything running. Today we build management systems, websites, AI tools and automations, and install CCTV and solar inverter systems for clients in health, government, education, real estate, law and many more industries.
             </p>
             <p>
-              We're registered with the Corporate Affairs Commission ({contact.cac}, {contact.registered}) and based in Ikot Ekpene, Akwa Ibom State, working with clients across Nigeria.
+              We're registered with the Corporate Affairs Commission ({contact.cac}, {contact.registered}) and work from Abuja, Port Harcourt in Rivers State, and Akwa Ibom State, serving clients across Nigeria.
             </p>
           </Reveal>
 

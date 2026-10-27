@@ -18,7 +18,7 @@ export function HeroCopy() {
       </div>
       <dl className="rise mt-11 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-6 text-[0.95rem] text-muted" style={d(0.85)}>
         <div className="flex items-center gap-2"><Icon name="shield" className="h-4 w-4 text-teal-strong" /><dt className="font-semibold text-ink">CAC registered</dt><dd>{contact.cac}</dd></div>
-        <div className="flex items-center gap-2"><Icon name="pin" className="h-4 w-4 text-teal-strong" /><dt className="font-semibold text-ink">Akwa Ibom</dt><dd>working across Nigeria</dd></div>
+        <div className="flex items-center gap-2"><Icon name="pin" className="h-4 w-4 text-teal-strong" /><dt className="font-semibold text-ink">Locations</dt><dd>Abuja, Port Harcourt, Akwa Ibom</dd></div>
       </dl>
     </>
   );

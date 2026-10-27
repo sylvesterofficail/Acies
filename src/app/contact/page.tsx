@@ -9,7 +9,7 @@ import type { IconName } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Start a project with Acies Africa Technologies. WhatsApp, call or email us, or visit us in Ikot Ekpene, Akwa Ibom.",
+  description: "Start a project with Acies Africa Technologies. WhatsApp, call or email us, with teams in Abuja, Port Harcourt and Akwa Ibom State.",
 };
 
 const channels: { icon: IconName; label: string; value: string; href: string; note: string; external?: boolean }[] = [
@@ -52,17 +52,22 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal delay={0.12} className="space-y-6">
-              <div className="overflow-hidden rounded-2xl border border-line bg-surface">
-                <iframe title="Map showing Acies Africa Technologies in Ikot Ekpene"
-                  src="https://maps.google.com/maps?q=Nkanga%20Street%2C%20Ikot%20Ekpene%2C%20Akwa%20Ibom&z=15&output=embed"
-                  className="h-64 w-full border-0 grayscale-[30%] dark:opacity-80 dark:invert-[0.9] dark:hue-rotate-180" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-                <div className="p-6">
-                  <h3 className="font-sans text-base font-semibold tracking-normal">Visit us</h3>
-                  <p className="mt-2 text-body">{contact.address}</p>
-                  <a href={contact.mapUrl} target="_blank" rel="noopener" className="mt-4 inline-flex items-center gap-2 font-semibold text-teal-strong">
-                    Get directions <Icon name="arrow" className="h-4 w-4" />
-                  </a>
-                </div>
+              <div className="rounded-2xl border border-line bg-surface p-6 sm:p-8">
+                <h3 className="font-sans text-base font-semibold tracking-normal">Where we work</h3>
+                <p className="mt-2 text-body">Our teams cover three locations and travel for installations across Nigeria.</p>
+                <ul className="mt-6 space-y-3">
+                  {contact.locations.map((l) => (
+                    <li key={l.name} className="flex items-center gap-4 rounded-xl bg-paper p-4">
+                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded bg-teal-soft text-teal-strong">
+                        <Icon name="pin" className="h-5 w-5" />
+                      </span>
+                      <span>
+                        <span className="block font-display font-semibold text-ink">{l.name}</span>
+                        <span className="block text-sm text-muted">{l.region}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
               <div className="rounded-2xl bg-teal-deep p-6 text-white">
                 <h3 className="font-sans text-base font-semibold tracking-normal text-white">Registered business</h3>

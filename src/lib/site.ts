@@ -13,8 +13,12 @@ export const contact = {
   whatsapp: "2348143972347",
   email: "aciesafricatech@gmail.com",
   instagram: "aciesafricatechnologies",
-  address: "35 Nkanga Street, Nkap GRA, Ikot Ekpene, Akwa Ibom State",
-  mapUrl: "https://maps.google.com/?q=35+Nkanga+Street+Nkap+GRA+Ikot+Ekpene+Akwa+Ibom",
+  locations: [
+    { name: "Abuja", region: "Federal Capital Territory" },
+    { name: "Port Harcourt", region: "Rivers State" },
+    { name: "Akwa Ibom State", region: "South-South Nigeria" },
+  ] as { name: string; region: string }[],
+  locationsLine: "Abuja, Port Harcourt (Rivers State) and Akwa Ibom State",
   cac: "BN 9165061",
   registered: "5 January 2026",
 };
@@ -211,7 +215,7 @@ export const faqs = [
   { q: "Will the software work when the internet is down?", a: "Yes, where it matters. Point of sale, attendance and clinic systems can keep working offline and sync automatically once the connection is back." },
   { q: "Can you combine software with CCTV or solar?", a: "That's what we're built for. A school can get its portal, cameras and backup power from one team, with one point of contact." },
   { q: "Do you support systems after launch?", a: "Yes. Maintenance plans cover updates, security fixes, backups, hosting and scheduled servicing of installed hardware." },
-  { q: "Where do you work?", a: "We're based in Ikot Ekpene, Akwa Ibom State. Software projects run anywhere; installations are scheduled across Nigeria." },
+  { q: "Where do you work?", a: "We work from Abuja, Port Harcourt in Rivers State, and Akwa Ibom State. Software projects run anywhere; installations are scheduled across Nigeria." },
   { q: "How do payments work?", a: "After the free consultation you get a written quote. Projects are usually paid in milestones, so you pay as each stage is delivered." },
 ];
 

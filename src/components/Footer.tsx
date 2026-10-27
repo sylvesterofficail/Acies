@@ -9,7 +9,7 @@ export function Footer() {
       <div className="shell grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div className="max-w-xs">
           <Logo className="h-10 w-auto" />
-          <p className="mt-5 text-muted">Software, websites, AI, automation, CCTV and solar, from one team in Akwa Ibom.</p>
+          <p className="mt-5 text-muted">Software, websites, AI, automation, CCTV and solar, from one team in Abuja, Port Harcourt and Akwa Ibom.</p>
         </div>
 
         <div>
@@ -40,7 +40,7 @@ export function Footer() {
             <li><a href={`tel:${contact.phone}`} className="flex items-center gap-3 hover:text-teal-strong"><Icon name="phone" className="h-4 w-4" />{contact.phoneDisplay}</a></li>
             <li><a href={`mailto:${contact.email}`} className="flex items-center gap-3 break-all hover:text-teal-strong"><Icon name="mail" className="h-4 w-4 shrink-0" />{contact.email}</a></li>
             <li><a href={`https://instagram.com/${contact.instagram}`} target="_blank" rel="noopener" className="flex items-center gap-3 hover:text-teal-strong"><Icon name="ig" className="h-4 w-4" />@{contact.instagram}</a></li>
-            <li className="flex items-start gap-3"><Icon name="pin" className="mt-1 h-4 w-4 shrink-0" />{contact.address}</li>
+            <li className="flex items-start gap-3"><Icon name="pin" className="mt-1 h-4 w-4 shrink-0" />{contact.locationsLine}</li>
           </ul>
         </div>
       </div>
