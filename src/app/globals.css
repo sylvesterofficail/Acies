@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Design tokens ---------- */
+:root {
+  --paper: 238 243 242;
+  --surface: 255 255 255;
+  --sunken: 227 235 234;
+  --ink: 15 57 71;          /* logo navy */
+  --body: 43 74 84;
+  --muted: 82 110 120;
+  --line: 207 220 219;
+  --teal: 23 191 192;       /* logo teal */
+  --teal-strong: 8 115 119;
+  --teal-soft: 211 240 239;
+  --teal-deep: 14 94 102;
+  --sun: 154 90 8;          /* solar amber, AA on white and sun-soft */
+  --sun-soft: 251 235 210;
+  --on-teal: 6 42 48;
+  --shadow: 15 57 71;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --paper: 7 24 28;
+  --surface: 13 35 40;
+  --sunken: 10 29 33;
+  --ink: 231 243 242;
+  --body: 189 211 212;
+  --muted: 132 163 166;
+  --line: 29 58 64;
+  --teal: 46 211 210;
+  --teal-strong: 79 224 222;
+  --teal-soft: 15 58 62;
+  --teal-deep: 14 94 102;
+  --sun: 242 180 85;
+  --sun-soft: 58 44 20;
+  --on-teal: 4 25 28;
+  --shadow: 0 0 0;
+  color-scheme: dark;
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 96px; }
+  body {
+    @apply bg-paper text-body font-sans antialiased;
+    font-size: 1.0625rem;
+    transition: background-color .3s ease, color .3s ease;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 { @apply font-display text-ink; letter-spacing: -0.025em; }
+  ::selection { background: rgb(var(--teal)); color: rgb(var(--on-teal)); }
+  :focus-visible { outline: 3px solid rgb(var(--teal)); outline-offset: 3px; border-radius: 8px; }
+}
+
+@layer components {
+  .shell { @apply mx-auto w-full max-w-shell px-4 sm:px-6 lg:px-10; }
+  .section { @apply py-20 md:py-28 lg:py-32; }
+  .lede { @apply text-md md:text-lg text-body max-w-[60ch]; }
+
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full px-6 font-semibold
+      transition-colors duration-200 ease-out disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary { @apply btn bg-teal text-onteal hover:bg-teal-strong hover:text-paper; }
+  .btn-ghost { @apply btn border-[1.5px] border-line text-ink hover:border-teal; }
+  .btn-light { @apply btn bg-white text-teal-deep hover:bg-teal-soft; }
+
+  .chip { @apply inline-flex items-center rounded-full border border-line px-3 py-1 text-sm text-muted; }
+
+  .card { @apply rounded-xl border border-line bg-surface; }
+
+  .field {
+    @apply w-full min-h-12 rounded border-[1.5px] border-line bg-paper px-4 text-ink placeholder:text-muted
+      transition-colors focus:border-teal focus:outline-none;
+  }
+}
+
+/* Diagonal hairline texture used behind dark bands, echoing the logo geometry */
+.diag-texture {
+  background-image: repeating-linear-gradient(45deg, rgb(var(--teal) / 0.06) 0 1px, transparent 1px 22px);
+}
+
+/* Entrance animations that run straight from the HTML, before JavaScript loads */
+@keyframes rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes word-up { from { transform: translateY(110%); } to { transform: none; } }
+@keyframes page-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes slide-in { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
+@keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+.rise { animation: rise-in .65s cubic-bezier(.22,1,.36,1) both; }
+.word-up { display: inline-block; animation: word-up .8s cubic-bezier(.22,1,.36,1) both; }
+.page-enter { animation: page-in .45s cubic-bezier(.22,1,.36,1) both; }
+.slide-in { animation: slide-in .5s cubic-bezier(.22,1,.36,1) both; }
+.draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.2s cubic-bezier(.22,1,.36,1) forwards; }
+
+.marquee-mask { mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
