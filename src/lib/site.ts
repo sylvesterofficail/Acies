@@ -6,6 +6,7 @@ import type { StaticImageData } from "next/image";
 import sylvester from "@/assets/team/sylvester.jpeg";
 import ebube from "@/assets/team/ebube.jpeg";
 import chimah from "@/assets/team/chimah.jpeg";
+import abiye from "@/assets/team/abiye.jpeg";
 import freonlpLogo from "@/assets/clients/freonlp.png";
 
 export const contact = {
@@ -186,11 +187,18 @@ export const team: Member[] = [
     lead: true,
   },
   {
-    name: "Chimah Chidozie",
+    name: "Chimah Chiedozie",
     role: "Data Officer & Software Engineer",
     focus: "Designs the databases, reports and data pipelines our systems run on.",
-    degree: "B.Sc. Software Engineering",
+    degree: "B.Sc. Software Engineering, Topfaith University",
     photo: chimah,
+  },
+  {
+    name: "Abiye Japhet",
+    role: "Software Engineer, Web3 & Blockchain",
+    focus: "Builds web applications and blockchain systems, from smart contracts to the apps that use them.",
+    degree: "B.Sc. Software Engineering, Topfaith University",
+    photo: abiye,
   },
 ];
 

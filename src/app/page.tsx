@@ -122,7 +122,7 @@ export default function Home() {
             <p className="lede mt-5">Software engineers, data specialists and installers who build and fit every system themselves. No outsourcing, no middlemen.</p>
             <Link href="/team/" className="btn-primary mt-8">Meet the team <Icon name="arrow" className="h-4 w-4" /></Link>
           </Reveal>
-          <Stagger className="grid grid-cols-2 gap-4 sm:gap-5 lg:max-w-[560px] lg:justify-self-end">
+          <Stagger className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
             {team.map((m) => (
               <StaggerItem key={m.name}>
                 <Link href="/team/" className="group block">

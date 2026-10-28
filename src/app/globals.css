@@ -42,12 +42,12 @@
 }
 
 @layer base {
-  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 96px; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 96px; overflow-x: clip; }
   body {
     @apply bg-paper text-body font-sans antialiased;
     font-size: 1.0625rem;
     transition: background-color .3s ease, color .3s ease;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
   h1, h2, h3, h4 { @apply font-display text-ink; letter-spacing: -0.025em; }
   ::selection { background: rgb(var(--teal)); color: rgb(var(--on-teal)); }

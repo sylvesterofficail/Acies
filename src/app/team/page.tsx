@@ -28,7 +28,7 @@ export default function TeamPage() {
       {/* ---------- Core team ---------- */}
       <section className="pb-24">
         <div className="shell">
-          <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {team.map((m) => (
               <StaggerItem key={m.name}>
                 <TiltCard className="h-full">
