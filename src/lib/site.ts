@@ -210,6 +210,18 @@ export const partners = {
   },
 };
 
+/* Happy clients. Add more by copying a block. */
+export const clients = [
+  {
+    name: "FreonLP",
+    url: "https://freonlp.com",
+    site: "freonlp.com",
+    industry: "Law",
+    about: "An indigenous Nigerian commercial law firm advising corporates, institutions and individuals on arbitration, banking and finance, and corporate governance.",
+    offices: "Abuja, Akure and Lagos",
+  },
+];
+
 export const faqs = [
   { q: "How long does a project take?", a: "A website or small system is usually ready in 2 to 4 weeks. Larger platforms take 1 to 3 months. CCTV and solar installations are typically done within a few days once equipment is confirmed." },
   { q: "Will the software work when the internet is down?", a: "Yes, where it matters. Point of sale, attendance and clinic systems can keep working offline and sync automatically once the connection is back." },

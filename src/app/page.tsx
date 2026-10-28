@@ -5,6 +5,7 @@ import { Icon } from "@/components/Icon";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { Counter, CtaBand, Faq, IndustryMarquee, ProcessSteps, TiltCard } from "@/components/blocks";
 import { PartnerDiagram } from "@/components/Partnership";
+import { Clients } from "@/components/Clients";
 import { Portrait } from "@/components/Team";
 import { faqs, industries, partners, services, supportingStaff, team, waLink } from "@/lib/site";
 
@@ -160,8 +161,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- Happy clients ---------- */}
+      <Clients className="border-y border-line bg-surface" />
+
       {/* ---------- FAQ ---------- */}
-      <section className="pb-8">
+      <section className="pb-8 pt-20 md:pt-28">
         <div className="shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <Reveal>
             <h2 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">Questions</h2>

@@ -5,6 +5,7 @@ import cac from "@/assets/brand/cac-certificate.jpg";
 import { Icon } from "@/components/Icon";
 import { PageHero } from "@/components/PageHero";
 import { PartnerDiagram } from "@/components/Partnership";
+import { Clients } from "@/components/Clients";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { Counter, CtaBand, IndustryMarquee, TiltCard } from "@/components/blocks";
 import { contact, industries, partners, services, supportingStaff, team } from "@/lib/site";
@@ -134,7 +135,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="pt-20">
+      <Clients />
+
+      <section className="pt-4">
         <Reveal className="shell mb-8 flex flex-wrap items-end justify-between gap-4">
           <h2 className="text-2xl font-semibold sm:text-3xl">Industries we serve</h2>
           <Link href="/services/" className="font-semibold text-teal-strong underline underline-offset-4">See what we build for each</Link>
