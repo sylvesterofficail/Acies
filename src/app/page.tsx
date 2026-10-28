@@ -6,7 +6,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { Counter, CtaBand, Faq, IndustryMarquee, ProcessSteps, TiltCard } from "@/components/blocks";
 import { PartnerDiagram } from "@/components/Partnership";
 import { Clients } from "@/components/Clients";
-import { Portrait } from "@/components/Team";
+import { TeamSpotlight } from "@/components/TeamSpotlight";
 import { faqs, industries, partners, services, supportingStaff, team, waLink } from "@/lib/site";
 
 export default function Home() {
@@ -114,33 +114,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- Team teaser ---------- */}
+      {/* ---------- Team spotlight ---------- */}
       <section className="section diag-texture border-y border-line bg-surface">
-        <div className="shell grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
-            <h2 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">The team behind the work</h2>
-            <p className="lede mt-5">Software engineers, data specialists and installers who build and fit every system themselves. No outsourcing, no middlemen.</p>
-            <Link href="/team/" className="btn-primary mt-8">Meet the team <Icon name="arrow" className="h-4 w-4" /></Link>
+        <div className="shell">
+          <Reveal className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-2xl">
+              <h2 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">The team behind the work</h2>
+              <p className="lede mt-5">Software engineers, data specialists and installers who build and fit every system themselves. No outsourcing, no middlemen.</p>
+            </div>
+            <Link href="/team/" className="btn-primary shrink-0">Meet the team <Icon name="arrow" className="h-4 w-4" /></Link>
           </Reveal>
-          <Stagger className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
-            {team.map((m) => (
-              <StaggerItem key={m.name}>
-                <Link href="/team/" className="group block">
-                  <Portrait m={m} className="aspect-[4/5] rounded-xl" sizes="(min-width: 1080px) 18vw, 45vw" />
-                  <p className="mt-3 font-display text-sm font-semibold text-ink sm:text-base">{m.name}</p>
-                  <p className="text-sm text-muted">{m.role}</p>
-                </Link>
-              </StaggerItem>
-            ))}
-            <StaggerItem>
-              <Link href="/team/" className="group grid aspect-[4/5] place-items-center rounded-xl bg-teal-deep p-4 text-center text-white transition-colors hover:bg-teal hover:text-onteal">
-                <span>
-                  <span className="block font-display text-3xl font-semibold sm:text-4xl">+{supportingStaff}</span>
-                  <span className="mt-2 block text-sm">engineers, installers and support staff</span>
-                </span>
-              </Link>
-            </StaggerItem>
-          </Stagger>
+          <Reveal delay={0.1}><TeamSpotlight /></Reveal>
         </div>
       </section>
 
