@@ -188,8 +188,8 @@ export const team: Member[] = [
   },
   {
     name: "Chimah Chiedozie",
-    role: "Data Officer & Software Engineer",
-    focus: "Designs the databases, reports and data pipelines our systems run on.",
+    role: "Data Officer, Software Engineer & UI/UX Designer",
+    focus: "Designs the databases and data pipelines our systems run on, and the screens people use them through.",
     degree: "B.Sc. Software Engineering, Topfaith University",
     photo: chimah,
   },
