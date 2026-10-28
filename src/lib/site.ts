@@ -6,6 +6,7 @@ import type { StaticImageData } from "next/image";
 import sylvester from "@/assets/team/sylvester.jpeg";
 import ebube from "@/assets/team/ebube.jpeg";
 import chimah from "@/assets/team/chimah.jpeg";
+import freonlpLogo from "@/assets/clients/freonlp.png";
 
 export const contact = {
   phoneDisplay: "+234 814 397 2347",
@@ -210,17 +211,32 @@ export const partners = {
   },
 };
 
-/* Happy clients. Add more by copying a block. */
-export const clients = [
+/* Happy clients. To add one: put their logo in src/assets/clients/, import it at the
+   top of this file, then copy the FreonLP block. Home shows the first 4; the
+   Clients page shows them all. */
+export type Client = {
+  name: string;
+  url: string;
+  site: string;
+  industry: string;
+  about: string;
+  offices?: string;
+  logo?: StaticImageData;
+};
+
+export const clients: Client[] = [
   {
-    name: "FreonLP",
+    name: "Freon Legal Practice",
     url: "https://freonlp.com",
     site: "freonlp.com",
     industry: "Law",
     about: "An indigenous Nigerian commercial law firm advising corporates, institutions and individuals on arbitration, banking and finance, and corporate governance.",
     offices: "Abuja, Akure and Lagos",
+    logo: freonlpLogo,
   },
 ];
+
+export const clientsOnHome = 4;
 
 export const faqs = [
   { q: "How long does a project take?", a: "A website or small system is usually ready in 2 to 4 weeks. Larger platforms take 1 to 3 months. CCTV and solar installations are typically done within a few days once equipment is confirmed." },
